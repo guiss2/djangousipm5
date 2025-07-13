@@ -1,5 +1,6 @@
 # PROYECTO DIPLOMADO
 ## Maria Guisela Huanca Torrez
+## celular 71980634 
 ## Instalar dependencias
 
 - Se recomienda utilizar un entorno virtual (virtualenv)
