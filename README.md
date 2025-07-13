@@ -27,7 +27,7 @@ python manage.py runserver
 ```
 # REQUERIMIENTOS
 
-## Requerimiento 1
+# Requerimiento 1
 
 ### Cree un Proyecto en Django con al menos una Aplicación ✅
 
