@@ -1,0 +1,41 @@
+<h2>Lista de Clientes</h2>
+<a href="{% url 'nuevo_cliente' %}">➕ Agregar nuevo cliente</a>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th style="text-align: center;">Nombre del Cliente</th>
+      <th style="text-align: center;">Correo</th>
+      <th style="text-align: center;">Cantidad de Compras</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for cliente in clientes %}
+      <tr>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.correo }}</td>
+        <td>{{ cliente.venta_set.count }}</td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td >No hay clientes registrados</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #126da5;
+  }
+</style>

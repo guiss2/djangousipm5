@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Categoria, Producto
+from .models import Categoria, Cliente, Producto, Venta, Demo
 
 
 admin.site.register(Categoria)
@@ -13,3 +13,6 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ('categoria', 'disponible',)
 
 admin.site.register(Producto, ProductoAdmin)
+#se registraron los modelos Cliente y Venta
+admin.site.register(Cliente)
+admin.site.register(Venta)

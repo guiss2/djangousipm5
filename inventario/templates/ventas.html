@@ -1,0 +1,40 @@
+<h2>Lista de Ventas</h2>
+<a href="{% url 'nueva_venta' %}">➕ Agregar una nueva venta</a>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr >
+      <th style="text-align: center;">Cliente</th>
+      <th style="text-align: center;">Fecha</th>
+      <th style="text-align: center;">Monto</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for venta in ventas %}
+      <tr>
+        <td>{{ venta.cliente }}</td>
+        <td>{{ venta.fecha }}</td>
+        <td>Bs {{ venta.monto }}</td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan="3">No hay ventas registradas.</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #3995db;
+  }
+</style>
+
