@@ -1,5 +1,5 @@
 # PROYECTO DIPLOMADO
-
+## Maria Guisela Huanca Torrez
 ## Instalar dependencias
 
 - Se recomienda utilizar un entorno virtual (virtualenv)
